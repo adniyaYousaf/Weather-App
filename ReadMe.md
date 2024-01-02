@@ -35,7 +35,7 @@
 
 ### What I learned
 
-I learned how to use mixin in Sass and how to evaluate a string expression in JavaScript.
+I learned how to fetch data from API in JavaScript.
 
 ```sass
 @mixin display($display, $justify, $align)
