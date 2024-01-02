@@ -35,7 +35,7 @@
 
 ### What I learned
 
-I learned how to fetch data from API in JavaScript.
+I learned how to use sass @mixin and fetch data from API in JavaScript.
 
 ```sass
 @mixin display($display, $justify, $align)
