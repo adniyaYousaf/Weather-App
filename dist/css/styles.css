@@ -2,6 +2,7 @@
   font-family: "roboto";
   src: url(/dist/font/Roboto-Regular.ttf);
   font-weight: 400;
+  font-display: swap;
 }
 * {
   box-sizing: border-box;
@@ -19,19 +20,19 @@ body .container {
   height: 100vh;
   display: grid;
   grid-template-areas: "n n n" "i i i" "b b b" "b b b" "b b b";
-  background: url(/dist/images/mobile-bg.jpeg) no-repeat;
+  background: url(/dist/images/mobile-bg.webp) no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
 }
 @media screen and (min-width: 30.75rem) {
   body .container {
-    background: url(/dist/images/clouds.jpeg);
+    background: url(/dist/images/clouds.webp);
   }
 }
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 55rem) {
   body .container {
-    background: url(/dist/images/snow.jpeg);
+    background: url(/dist/images/snow.webp);
     grid-template-areas: "n n b" "n n b" "n n b" "n n b" "i i b";
   }
 }
@@ -45,6 +46,10 @@ body .container .nav {
 }
 body .container .nav .logo {
   grid-area: logo;
+  height: 100%;
+}
+body .container .nav .logo img {
+  height: 2rem;
 }
 body .container .nav .location {
   grid-area: loc;
@@ -78,17 +83,47 @@ body .container .info {
   gap: 1rem;
   padding-inline: 2rem;
 }
+@media screen and (min-width: 55rem) {
+  body .container .info {
+    font-size: 2rem;
+  }
+}
 body .container .info .temp {
   font-size: 3.5rem;
+}
+@media screen and (min-width: 55rem) {
+  body .container .info .temp {
+    font-size: 6rem;
+  }
 }
 body .container .info #city {
   font-size: 2rem;
 }
+@media screen and (min-width: 55rem) {
+  body .container .info #city {
+    font-size: 3rem;
+  }
+}
 body .container .info #time {
   font-size: 0.8rem;
 }
+@media screen and (min-width: 55rem) {
+  body .container .info #time {
+    font-size: 1.4rem;
+  }
+}
 body .container .info img {
   height: 2rem;
+}
+@media screen and (min-width: 30.75rem) {
+  body .container .info img {
+    height: 3rem;
+  }
+}
+@media screen and (min-width: 55rem) {
+  body .container .info img {
+    height: 4rem;
+  }
 }
 body .container .bottom-card {
   grid-area: b;
@@ -116,12 +151,12 @@ body .container .bottom-card::before {
     bottom: 5rem;
   }
 }
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 55rem) {
   body .container .bottom-card::before {
     bottom: 10rem;
   }
 }
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 55rem) {
   body .container .bottom-card {
     border-top: 0;
     border-left: 4px solid rgba(211, 201, 201, 0.1098039216);

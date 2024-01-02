@@ -29,7 +29,7 @@ const fetchWeather = async (city) => {
     setWeatherImage(data.weather[0].main);
     console.log(data.weather[0].main);
 }
-fetchWeather('lahore');
+fetchWeather('london');
 
 search.addEventListener('click', () => {
     const input = document.querySelector('#input').value;
