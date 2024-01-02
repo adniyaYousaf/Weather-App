@@ -1,0 +1,116 @@
+@font-face
+    font-family: 'roboto'
+    src: url(/dist/font/Roboto-Regular.ttf)
+    font-weight: 400
+
+@mixin display($display, $justify, $align)
+    display: flex
+    justify-content: $justify
+    align-items: $align
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    min-height: 100vh
+    color: white
+    font-family: 'roboto'
+    font-size: 1rem
+
+    .container
+        height: 100vh
+        display: grid
+        grid-template-areas: "n n n" "i i i" "b b b" "b b b" "b b b"
+        background: url(/dist/images/mobile-bg.jpeg) no-repeat
+        background-size: cover
+        background-position: center
+        color: white
+        @media screen and (min-width:30.75rem)
+            background: url(/dist/images/clouds.jpeg)
+        @media screen and (min-width:45rem)
+            background: url(/dist/images/snow.jpeg)
+            grid-template-areas: "n n b" "n n b" "n n b" "n n b" "i i b"
+        .nav
+            grid-area: n
+            display: grid
+            height: 2rem
+            grid-template-areas: "logo .loc"
+            justify-content: space-between
+            padding: 1rem
+
+            .logo
+                grid-area: logo
+
+            .location
+                grid-area: loc
+                background: transparent
+                border-bottom: 1px solid white
+                @include display($display: flex , $justify:space-between , $align: center)
+                input
+                    width: 80%
+                    background: transparent
+                    border: none
+                    color: white
+                    &:focus
+                        border: none
+                        outline: none
+                    &::placeholder
+                        color: white
+                img
+                    cursor: pointer
+        .info
+            @include display($display: flex , $justify:center , $align: center)
+            grid-area: i
+            gap: 1rem
+            padding-inline: 2rem
+
+            .temp
+                font-size: 3.5rem
+            #city
+                font-size: 2rem
+            #time
+                font-size: 0.8rem
+            img
+                height: 2rem
+
+        .bottom-card
+            grid-area: b
+            height: 100%
+            position: relative
+            @include display($display: flex, $justify: center , $align: center)
+            flex-direction: column
+            gap: 1.4rem
+            backdrop-filter: blur(1rem)
+            border-top: 4px solid #d3c9c91c
+            &::before
+                position: absolute
+                content: ""
+                height: 0.07rem
+                width: 85%
+                background: white
+                bottom: 3rem
+                left: 5%
+                @media screen and (min-width:30.75rem)
+                    bottom: 5rem
+                @media screen and (min-width:45rem)
+                    bottom: 10rem
+
+
+            @media screen and (min-width:45rem)
+                border-top: 0
+                border-left: 4px solid #d3c9c91c
+
+            .card
+                width: 90%
+                @include display($display: flex, $justify: space-between, $align: center)
+                .heading
+                    font-weight: 300
+                    font-size: 1.2rem
+                .span
+                    width: 30%
+                    @include display($display: flex, $justify: center , $align: center )
+                    gap: 1rem
+                    img
+                        height: 1.9rem

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body class="center">
+    <section class="container">
+      <nav class="nav">
+        <section class="logo">
+          <img  src="/dist/images/Group 165.svg" alt="Logo" />
+        </section>
+
+        <section class="location">
+          <input id="input" type="text" placeholder="Search Location" />
+          <img id="search" src="/dist/images/fa_search.svg" alt="Search Icon" />
+        </section>
+      </nav>
+
+      <section class="info">
+        <p class="temp" id="temp">16°</p>
+        <section>
+          <p id="city">London</p>
+          <p id="time">06:40 Monday 9 Sep '23</p>
+        </section>
+        <img id="weather" src="/dist/images/outline.svg" alt="Weather icon" />
+      </section>
+
+      <section class="bottom-card">
+        <h1>Weather Details....</h1>
+        <p id="discription">Lorem ipsum dolor , necessitatibus sunt?</p>
+        <section class="card">
+          <h2 class="heading">Temp max</h2>
+          <span class="span">
+            <p id="max-temp">19</p>
+            <img
+              class="temp-img"
+              src="/dist/images/Vector.svg"
+              alt="vector image"
+            />
+          </span>
+        </section>
+        <section class="card">
+          <h2 class="heading">Temp min</h2>
+          <span class="span">
+            <p id="min-temp">19</p>
+            <img
+              class="temp-img"
+              src="/dist/images/VectorBlue.svg"
+              alt="vector image"
+            />
+          </span>
+        </section>
+        <section class="card">
+          <h2 class="heading">Humidity</h2>
+          <span class="span">
+            <p id="humidity">19</p>
+            <img
+              class="temp-img"
+              src="/dist/images/humidity.svg"
+              alt="vector image"
+            />
+          </span>
+        </section>
+        <section class="card">
+          <h2 class="heading">Feels Like</h2>
+          <span class="span">
+            <p id="pressure">19</p>
+            <img
+              class="temp-img"
+              src="/dist/images/outline.svg"
+              alt="vector image"
+            />
+          </span>
+        </section>
+        <section class="card">
+          <h2 class="heading">Wind</h2>
+          <span class="span">
+            <p id="wind">19</p>
+            <img
+              class="temp-img"
+              src="/dist/images/wind.svg"
+              alt="vector image"
+            />
+          </span>
+        </section>
+      </section>
+    </section>
+    <script src="/index.js"></script>
+  </body>
+</html>

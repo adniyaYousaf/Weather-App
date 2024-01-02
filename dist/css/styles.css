@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "roboto";
+  src: url(/dist/font/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+  font-family: "roboto";
+  font-size: 1rem;
+}
+body .container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "n n n" "i i i" "b b b" "b b b" "b b b";
+  background: url(/dist/images/mobile-bg.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+@media screen and (min-width: 30.75rem) {
+  body .container {
+    background: url(/dist/images/clouds.jpeg);
+  }
+}
+@media screen and (min-width: 45rem) {
+  body .container {
+    background: url(/dist/images/snow.jpeg);
+    grid-template-areas: "n n b" "n n b" "n n b" "n n b" "i i b";
+  }
+}
+body .container .nav {
+  grid-area: n;
+  display: grid;
+  height: 2rem;
+  grid-template-areas: "logo .loc";
+  justify-content: space-between;
+  padding: 1rem;
+}
+body .container .nav .logo {
+  grid-area: logo;
+}
+body .container .nav .location {
+  grid-area: loc;
+  background: transparent;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container .nav .location input {
+  width: 80%;
+  background: transparent;
+  border: none;
+  color: white;
+}
+body .container .nav .location input:focus {
+  border: none;
+  outline: none;
+}
+body .container .nav .location input::placeholder {
+  color: white;
+}
+body .container .nav .location img {
+  cursor: pointer;
+}
+body .container .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: i;
+  gap: 1rem;
+  padding-inline: 2rem;
+}
+body .container .info .temp {
+  font-size: 3.5rem;
+}
+body .container .info #city {
+  font-size: 2rem;
+}
+body .container .info #time {
+  font-size: 0.8rem;
+}
+body .container .info img {
+  height: 2rem;
+}
+body .container .bottom-card {
+  grid-area: b;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+  backdrop-filter: blur(1rem);
+  border-top: 4px solid rgba(211, 201, 201, 0.1098039216);
+}
+body .container .bottom-card::before {
+  position: absolute;
+  content: "";
+  height: 0.07rem;
+  width: 85%;
+  background: white;
+  bottom: 3rem;
+  left: 5%;
+}
+@media screen and (min-width: 30.75rem) {
+  body .container .bottom-card::before {
+    bottom: 5rem;
+  }
+}
+@media screen and (min-width: 45rem) {
+  body .container .bottom-card::before {
+    bottom: 10rem;
+  }
+}
+@media screen and (min-width: 45rem) {
+  body .container .bottom-card {
+    border-top: 0;
+    border-left: 4px solid rgba(211, 201, 201, 0.1098039216);
+  }
+}
+body .container .bottom-card .card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container .bottom-card .card .heading {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+body .container .bottom-card .card .span {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body .container .bottom-card .card .span img {
+  height: 1.9rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
