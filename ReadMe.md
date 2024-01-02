@@ -21,7 +21,7 @@
 
 ### Links
 
-- Live Site URL: [Live URL](https://app.netlify.com/sites/steady-cajeta-952b21/overview)
+- Live Site URL: [Live URL](https://steady-cajeta-952b21.netlify.app/)
 
 ## My process
 
