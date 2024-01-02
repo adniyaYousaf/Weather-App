@@ -17,7 +17,9 @@
 
 ### Screenshot
 
-![](/dist/images/Screenshot%20from%202024-01-02%2000-14-59.png)
+![](/dist/images/mobile.png)
+![](/dist/images/Screenshot%20from%202024-01-02%2020-31-56.png)
+![](/dist/images/Screenshot%20from%202024-01-02%2020-31-40.png)
 
 ### Links
 
