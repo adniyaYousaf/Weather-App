@@ -64,5 +64,5 @@ const fetchWeather = async (city) => {
 
 ## Author
 
-- Website - [Adniya Yousaf](https://adniyayousaf.netlify.app)
+- Website - [Adniya Yousaf](https://adniya-yousaf.netlify.app/)
 
